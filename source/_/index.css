@@ -1,0 +1,154 @@
+@keyframes svgShow {
+    from {
+        width: 0%;
+        opacity: 0%;
+    }
+
+    to {
+        width: 100%;
+        opacity: 100%;
+    }
+}
+
+*::selection {
+    color: black;
+    background: white;
+}
+
+body {
+    margin-top: 0;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    font-size: 1.5em;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar, code::-webkit-scrollbar, pre::-webkit-scrollbar {
+    display: none;
+}
+
+body a:link,
+body a:visited,
+body a:hover,
+body a:focus,
+body input:focus {
+    outline: none;
+    color: white;
+}
+
+a[target="_blank"]:after {
+    content: url(/open.svg);
+    margin-left: 0.25em;
+}
+
+body a:active:not(body>div.topAnchor a) {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
+body>div.content {
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+}
+
+body>div.content>h1 {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 1ch;
+}
+
+th {
+    text-align: center;
+}
+
+code {
+    border: 1px solid white;
+}
+
+body>div.content>p {
+    text-align: justify;
+}
+
+body>div.content blockquote {
+    margin: 0px;
+    border-left: 0.25em solid white;
+    border-right: 0.25em solid white;
+    border-radius: 0.75em;
+    padding: 0.25em 1em;
+}
+
+mark {
+    background-color: white;
+    border-radius: 0.25ch;
+    color: black;
+}
+
+body>div.topAnchor {
+    display: flex;
+    max-width: 80ch;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    background-color: black;
+    box-shadow: 0px 1ch 1ch black;
+}
+
+body>div.topAnchor>a,
+body>div.topAnchor>button,
+body>div.topAnchor>button>img {
+    height: 32px;
+}
+
+body>div.topAnchor>div.search {
+    width: 100%;
+    margin: 0px 1ch 0px 1ch;
+}
+
+body>div.topAnchor>div.search>input {
+    width: 100%;
+    height: 32px;
+    border: 0px;
+    color: white;
+    background-color: black;
+    font-size: 1em;
+    padding: 0px;
+}
+
+body>div.topAnchor>button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+body>div.content pre>code.language-mermaid,
+body>div.content div.mermaid:not([data-processed]) {
+    display: none;
+}
+
+body>div.content div.mermaid>svg {
+    display: block;
+    margin: auto;
+    animation: svgShow 1s;
+}
